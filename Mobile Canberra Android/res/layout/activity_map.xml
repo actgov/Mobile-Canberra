@@ -1,0 +1,300 @@
+<com.agimind.widget.SlideHolder xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/maproot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- Here is any view that will represent your side menu. Don't forget to provide width! -->
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF" >
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/menubk"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/menubk" />
+
+        <ListView
+            android:id="@+id/menulist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#80FFFFFF"
+            android:dividerHeight="1px"
+            android:scrollingCache="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#373d46" >
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/sliderbtn"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="menuPress"
+                android:src="@drawable/menu_press" />
+
+            <ImageView
+                android:id="@+id/headerlogo"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="menuPress"
+                android:src="@drawable/headerlogo" />
+
+            <ImageView
+                android:id="@+id/aroundmeheader"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="aroundMe"
+                android:src="@drawable/headeraroundme_press" />
+
+            <ImageView
+                android:id="@+id/favouritesheader"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/aroundmeheader"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="favourites"
+                android:src="@drawable/headerfavourites_press" />
+        </RelativeLayout>
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/datasetgallery"
+            android:layout_below="@+id/topbar"
+            android:layout_marginTop="10dp"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            map:cameraTargetLat="-35.3075"
+            map:cameraTargetLng="149.1244"
+            map:cameraTilt="30"
+            map:cameraZoom="13" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/map"
+            android:layout_marginTop="30dp"
+            android:background="#BF232323" >
+
+            <ImageView
+                android:id="@+id/mylocbtn"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="centerToLoc"
+                android:paddingRight="10dp"
+                android:src="@drawable/mylocationbtn" />
+
+            <ImageView
+                android:id="@+id/searchbtn"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/mylocbtn"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="searchLoc"
+                android:src="@drawable/searchbtn" />
+
+            <EditText
+                android:id="@+id/searchAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/searchbtn"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="Search for address here"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="#69b8d4" >
+            </EditText>
+        </RelativeLayout>
+
+        <Gallery
+            android:id="@+id/datasetgallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#232323"
+            android:spacing="10dp"
+            android:unselectedAlpha="0.4" />
+
+        <View
+            android:id="@+id/opacityMask"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="#75232323"
+            android:clickable="false"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/dialogholder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/topbar"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/dialogbk"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/redlargepinbk" />
+
+            <TextView
+                android:id="@+id/dialogtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/dialogbk"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:maxLines="4"
+                android:scrollbars="vertical"
+                android:text="Bus Stops"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dialoginfo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialogtitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:maxLines="4"
+                android:scrollbars="vertical"
+                android:text="LOLOLOO etewqt oqetqete"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp" />
+
+            <ImageView
+                android:id="@+id/dialogtakemethere"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dialoginfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="takeMeThere"
+                android:src="@drawable/redtakemetherebtn" />
+
+            <ImageView
+                android:id="@+id/dialogaddset"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dialogtakemethere"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="addToFavs"
+                android:src="@drawable/addset" />
+
+            <ImageView
+                android:id="@+id/dialogclose"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/dialogbk"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="closeDialog"
+                android:src="@drawable/closemarkerredbtn" />
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:id="@+id/mapTutorialholder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#D9232323"
+            android:visibility="gone"
+            android:clickable="false" >
+
+            <ImageView
+                android:id="@+id/titleimage"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/headerlogo" />
+
+            <Gallery
+                android:id="@+id/mapTutorialGallery"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/skip"
+                android:layout_below="@+id/titleimage"
+                android:spacing="10dp"
+                android:unselectedAlpha="0.4" />
+
+            <Button
+                android:id="@+id/skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:onClick="skipTutorial"
+                android:text="OK"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.agimind.widget.SlideHolder>

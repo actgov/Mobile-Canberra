@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    
+ <ImageView
+        android:id="@+id/datasetcolormap"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circle"
+        android:adjustViewBounds="true" />
+
+    <TextView
+        android:id="@+id/datasetrownamemap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/datasetcolormap"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Bus Stops"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp" />
+   
+</RelativeLayout>

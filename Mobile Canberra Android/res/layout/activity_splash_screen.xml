@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".SplashScreen" >
+
+    <ImageView
+        android:id="@+id/splashscreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splashscreen" />
+
+    <ImageView
+        android:id="@+id/imaginelogo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:adjustViewBounds="true"
+        android:paddingBottom="25dp"
+        android:src="@drawable/imagineteamlogo" />
+
+    <ImageView
+        android:id="@+id/zoologo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imaginelogo"
+        android:adjustViewBounds="true"
+        android:paddingBottom="30dp"
+        android:src="@drawable/zoologo" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>24D001F3-5A55-4925-B78F-46485E8FA8EA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Mobile Canberra</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A1266572-F178-49DF-A589-1B207C6F64EC</key>
+		<string>svn://codebase.imagineteamsolutions.com:9002/mobilecanberraphasetwo</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mobile Canberra iPhone/Mobile Canberra.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A1266572-F178-49DF-A589-1B207C6F64EC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>A1266572-F178-49DF-A589-1B207C6F64EC</key>
+		<string>svn://codebase.imagineteamsolutions.com:9002/mobilecanberraphasetwo</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://codebase.imagineteamsolutions.com:9002/mobilecanberraphasetwo/Mobile%20Canberra%20iPhone/Mobile%20Canberra.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A1266572-F178-49DF-A589-1B207C6F64EC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A1266572-F178-49DF-A589-1B207C6F64EC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mobile Canberra Phase 2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController">
+            <connections>
+                <outlet property="helpmefind" destination="395" id="617"/>
+                <outlet property="search" destination="199" id="575"/>
+                <outlet property="tableView" destination="399" id="576"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="167">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="headerlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                    <rect key="frame" x="114" y="26" width="92" height="35"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="92" id="Bq5-nq-968"/>
+                        <constraint firstAttribute="height" constant="35" id="rHP-xK-qyW"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                    <rect key="frame" x="20" y="30" width="31" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="9H6-65-i6J"/>
+                        <constraint firstAttribute="height" constant="24" id="PpT-9O-ZQH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="headerslider.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showMenu:" destination="-1" eventType="touchUpInside" id="618"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46">
+                    <rect key="frame" x="272" y="26" width="35" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="HbO-fc-4nF"/>
+                        <constraint firstAttribute="height" constant="33" id="rYl-W3-4Dh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="headeraroundme.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="aroundMeClicked:" destination="-1" eventType="touchUpInside" id="qWs-rQ-0S8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90">
+                    <rect key="frame" x="232" y="26" width="32" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="dYz-Cz-gT4"/>
+                        <constraint firstAttribute="width" constant="32" id="s16-uD-5gq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" backgroundImage="headerfavourites.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showFavs:" destination="-1" eventType="touchUpInside" id="Kg3-k6-usM"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="142">
+                    <rect key="frame" x="0.0" y="67" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.28627450980000002" green="0.31764705879999999" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="221">
+                    <rect key="frame" x="0.0" y="118" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.28627450980000002" green="0.31764705879999999" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="gpe-OF-g1V"/>
+                        <constraint firstAttribute="height" constant="1" id="ra2-3V-pYK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="404">
+                    <rect key="frame" x="0.0" y="172" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.28627450980000002" green="0.31764705879999999" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="405"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" image="mainsearch.png" translatesAutoresizingMaskIntoConstraints="NO" id="156">
+                    <rect key="frame" x="20" y="76" width="287" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="287" id="Vyx-aE-POX"/>
+                        <constraint firstAttribute="height" constant="35" id="pzt-fR-how"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="I'm looking for..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="199">
+                    <rect key="frame" x="53" y="84" width="235" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="235" id="215"/>
+                    </constraints>
+                    <color key="textColor" red="0.4091796875" green="0.72590095769999996" blue="0.83357484879999999" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </textField>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="HELP ME FIND:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="395">
+                    <rect key="frame" x="43" y="119" width="235" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="235" id="aAl-d8-NUq"/>
+                        <constraint firstAttribute="height" constant="54" id="hjX-iL-gcM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="399">
+                    <rect key="frame" x="0.0" y="172" width="320" height="396"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="167" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="172"/>
+                <constraint firstItem="167" firstAttribute="top" secondItem="1" secondAttribute="top" id="173"/>
+                <constraint firstItem="167" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="176"/>
+                <constraint firstItem="167" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="177"/>
+                <constraint firstItem="199" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="53" id="218"/>
+                <constraint firstItem="404" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="406"/>
+                <constraint firstItem="404" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="409"/>
+                <constraint firstItem="399" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="555"/>
+                <constraint firstItem="399" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="558"/>
+                <constraint firstItem="399" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="566"/>
+                <constraint firstItem="399" firstAttribute="top" secondItem="1" secondAttribute="top" constant="172" id="616"/>
+                <constraint firstItem="90" firstAttribute="top" secondItem="1" secondAttribute="top" constant="26" id="1Wg-QW-1Vm"/>
+                <constraint firstItem="90" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="26" id="1mj-eu-SdN"/>
+                <constraint firstItem="221" firstAttribute="top" secondItem="156" secondAttribute="bottom" constant="7" id="5a5-KE-lGR"/>
+                <constraint firstItem="36" firstAttribute="top" secondItem="1" secondAttribute="top" constant="30" id="6dx-Sq-0jz"/>
+                <constraint firstItem="46" firstAttribute="leading" secondItem="90" secondAttribute="trailing" constant="8" id="Asm-UV-ilm"/>
+                <constraint firstAttribute="trailing" secondItem="46" secondAttribute="trailing" constant="13" id="BxZ-4s-OR6"/>
+                <constraint firstAttribute="trailing" secondItem="395" secondAttribute="trailing" constant="42" id="HZs-vx-F5s"/>
+                <constraint firstItem="5" firstAttribute="top" secondItem="1" secondAttribute="top" constant="26" id="KJP-Jt-dEO"/>
+                <constraint firstItem="395" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="43" id="Ku2-ny-27h"/>
+                <constraint firstItem="5" firstAttribute="leading" secondItem="36" secondAttribute="trailing" constant="63" id="Neb-Ra-WxC"/>
+                <constraint firstItem="156" firstAttribute="top" secondItem="142" secondAttribute="bottom" constant="8" id="OO5-c4-E8o"/>
+                <constraint firstItem="221" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="RPn-1l-hFG"/>
+                <constraint firstItem="36" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="aDW-wU-P94"/>
+                <constraint firstItem="156" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="emG-tP-kHd"/>
+                <constraint firstAttribute="trailing" secondItem="221" secondAttribute="trailing" id="k1U-3p-eAi"/>
+                <constraint firstItem="395" firstAttribute="top" secondItem="221" secondAttribute="bottom" id="n66-3c-xWM"/>
+                <constraint firstItem="46" firstAttribute="top" secondItem="1" secondAttribute="top" constant="26" id="zoF-YT-Yzb"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background.png" width="900" height="1271"/>
+        <image name="headeraroundme.png" width="213" height="200"/>
+        <image name="headerfavourites.png" width="160" height="172"/>
+        <image name="headerlogo.png" width="545" height="239"/>
+        <image name="headerslider.png" width="28" height="21"/>
+        <image name="mainsearch.png" width="947" height="115"/>
+    </resources>
+</document>
